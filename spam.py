@@ -7,6 +7,8 @@ import time
 
 #find /var/lib/cassandra/ -name hej -exec rsync -rR {} backup2/ \;
 
+#nodetool snapshot -t nowy_backup | find /var/lib/cassandra/ -name nowy_backup -exec rsync -rR {} backup2/ \; | tar -cvf backup.tar backup2/
+
 
 def randomString():
     numer = random.randint(7,15)
