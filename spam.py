@@ -1,8 +1,13 @@
+#!/usr/bin/env python
 import cql
 import os
 import random
 import string
 import time
+
+#find /var/lib/cassandra/ -name hej -exec rsync -rR {} backup2/ \;
+
+
 def randomString():
     numer = random.randint(7,15)
     letters = string.ascii_lowercase
